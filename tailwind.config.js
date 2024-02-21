@@ -9,7 +9,9 @@ module.exports = {
       Nunito: ['Nunito Sans', 'sans-serif'],
     },
     extend: {
-      // Type here...
+      listStyleImage: {
+        greenBullet: 'url("/src/bullet/Green/icons16.png")',
+      },
       boxShadow: {
         'shadow2': 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px',
       },
