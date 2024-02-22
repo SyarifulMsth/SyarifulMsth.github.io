@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth md:scroll-auto overflow-x-hidden">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link href="src/output.css" rel="stylesheet">
+  <link href="dist/output.css" rel="stylesheet">
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,33 +25,45 @@
 
 </head>
 
-<body class="bg-repeat z-50 box-border" style="background-image: url(/src/img/background.png);">
+<body id="main" class="bg-repeat z-1 box-border" style="background-image: url(/dist/img/background.png);">
   <!-- Header Start -->
-  <header class="w-screen bg-white shadow-shadow2 ">
-    <div class="flex justify-between mx-20 py-4 ">
-      <div class="px-3 flex justify-center items-center font-Fredericka text-xl">
-        <span class="px-1 text-pink-500">∘</span>
-        <span class="px-1 text-yellow-500">∘</span>
-        <span class="px-1 text-green-500">∘</span>
-        SM
-        <span class="px-1 text-green-500">∘</span>
-        <span class="px-1 text-yellow-500">∘</span>
-        <span class="px-1 text-pink-500">∘</span>
-      </div>
+  <header class="bg-white absolute top-0 left-0 w-full flex items-center z-10">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4 flex justify-center">
+          <div class=" text-black block py-6 pl-20 font-Fredericka text-xl">
+            <span class="md:px-1 text-pink-500">∘</span>
+            <span class="md:px-1 text-yellow-500">∘</span>
+            <span class="md:px-1 text-green-500">∘</span>
+            <a href="#home">SYARIFUL</a>
+            <span class="md:px-1 text-green-500">∘</span>
+            <span class="md:px-1 text-yellow-500">∘</span>
+            <span class="md:px-1 text-pink-500">∘</span>
+          </div>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+            <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+          </button>
 
-      <div>
-        <ul class="flex items-center font-Forum text-lg">
-          <li><a href=""
-              class="bg-white py-2 px-6 hover:bg-black hover:text-white hover:shadow-shadow85 transition ease-in-out duration-500">Home</a>
-          </li>
-          <li><a href=""
-              class="bg-white py-2 px-6 border-x  hover:bg-black hover:text-white hover:shadow-shadow85 transition ease-in-out duration-500">Portofolios</a>
-          </li>
-          <li><a href=""
-              class="bg-white py-2 px-6 hover:bg-black hover:text-white hover:shadow-shadow85 transition ease-in-out duration-500">About
-              Me</a>
-          </li>
-        </ul>
+          <nav id="nav-menu"
+            class="hidden absolute py-5 bg-white font-Poppins shadow-shadow2 rounded-lg max-w-[180px] w-full right-4 top-full lg:bg-transparent lg:block lg:static lg:max-w-full lg:shadow-none lg:rounded-none lg:justify-center ">
+            <ul class="block lg:flex ">
+              <li class="group"><a href="/#"
+                  class="text-base text-black py-2 px-2 mx-8 flex justify-center group-hover:bg-black group-hover:text-white group-hover:shadow-shadow85 lg:w-full transition ease-in-out duration-500">Home</a>
+              </li>
+              <li class="group"><a href="/#portofolios"
+                  class="text-base text-black py-2 px-2 mx-8 flex justify-center border-y lg:border-y-0 lg:border-x  group-hover:bg-black group-hover:text-white group-hover:shadow-shadow85 lg:w-full transition ease-in-out duration-500">Portofolios</a>
+              </li>
+              <li class="group"><a href="/#"
+                  class="text-base text-black py-2 px-2 mx-8 flex justify-center group-hover:bg-black group-hover:text-white group-hover:shadow-shadow85 lg:w-full transition ease-in-out duration-500">About
+                  Me</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
@@ -59,11 +71,11 @@
 
   <main>
     <!-- Hero Section Start -->
-    <section id="home" class="pt-24 lg:pt-14 lg:pb-0">
+    <section id="home" class="pt-24 lg:pt-28 lg:pb-0">
       <div class="container">
         <!-- Description -->
         <div class="flex w-screen flex-wrap">
-          <h1 class="flex w-full justify-center text-center font-Fredericka text-3xl md:text-5xl">Hello,<br> I'm
+          <h1 class="flex w-full justify-center text-center font-Fredericka text-3xl md:text-5xl">Yo,<br> I'm
             Syariful
             Musthofa.
           </h1>
@@ -83,9 +95,9 @@
 
         <!-- About Button -->
         <div class=" w-1/2 my-5 box-border flex justify-center mx-auto group md:w-screen">
-          <div ttps://www.w3schools.com" target="_blank"
+          <div
             class="text-sm font-Forum w-full h-full py-2 flex justify-center button-33 md:w-4/12 lg:w-2/12 lg:text-base">
-            More about me →
+            <a href="/#">More about me →</a>
           </div>
         </div>
       </div>
@@ -115,10 +127,10 @@
 
           <div class="flex justify-between gap-4">
             <div>
-              <h3 class="text-base text-gray-900 font-bold">
+              <h3 class="text-base text-gray-900 font-bold font-Nunito">
                 Data Analyst
               </h3>
-              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65">Making data to driven decision
+              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65 font-Nunito">Making data to driven decision
                 making</p>
             </div>
           </div>
@@ -139,10 +151,10 @@
 
           <div class="flex justify-between gap-4">
             <div>
-              <h3 class="text-base text-gray-900 font-bold">
+              <h3 class="text-base text-gray-900 font-bold font-Nunito">
                 Machine Learning Engineer
               </h3>
-              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65">Making data to driven decision
+              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65 font-Nunito">Making data to driven decision
                 making</p>
             </div>
           </div>
@@ -163,10 +175,10 @@
 
           <div class="flex justify-between gap-4">
             <div>
-              <h3 class="text-base text-gray-900 font-bold">
+              <h3 class="text-base text-gray-900 font-bold font-Nunito">
                 Front-End Web Developer
               </h3>
-              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65">Making data to driven decision
+              <p class="mt-1 text-xs font-medium text-gray-600 opacity-65 font-Nunito">Making data to driven decision
                 making</p>
             </div>
           </div>
@@ -186,7 +198,7 @@
     <!-- Ability Section end -->
 
     <!-- Experience Section Start -->
-    <section id="experience" class="w-screen mt-11 lg:mt-20">
+    <section id="experience" class="w-screen mt-16 lg:mt-28 ">
       <div class="flex flex-col flex-nowrap px-3 md:flex-row md:w-screen lg:px-0">
         <!-- Experience Content Start -->
         <div class="w-full">
@@ -201,7 +213,10 @@
                 </p>
                 <p class="font-Nunito font-light text-sm"> Okt 2023 - Dec 2023 · 3 months
                 </p>
-                <p class="font-forum text-black py-2 text-pretty">IDCamp is a scholarship program organized by Indosat
+                <p class="text-black py-2 text-pretty font-Nunito">IDCamp is a scholarship program
+                  organized
+                  by
+                  Indosat
                   Ooredoo Hutchison with the aim of producing young Indonesian developers/programmers who are ready to
                   compete in the digital economy.
                 </p>
@@ -216,7 +231,8 @@
                 </p>
                 <p class="font-Nunito font-light text-sm"> Feb 2023 - Aug 2023 · 7 months
                 </p>
-                <p class="font-forum text-black py-2 text-pretty">Bangkit is a unique program, led by Google in
+                <p class="text-black py-2 text-pretty font-Nunito">Bangkit is a unique program, led
+                  by Google in
                   collaboration with Indonesia's leading technology companies including GoTo, Traveloka, and Deeptech
                   Foundation.
                 </p>
@@ -229,7 +245,8 @@
                 </p>
                 <p class="font-Nunito font-light text-sm"> Okt 2022 - Des 2022 · 3 months
                 </p>
-                <p class="font-forum text-black py-2 text-pretty">Digital Talent Scholarship Machine Learning Developer
+                <p class=" text-black py-2 text-pretty font-Nunito">Digital Talent Scholarship
+                  Machine Learning Developer
                   is a competency improvement training program in the ICT field provided by the Ministry of
                   Communication
                   and Informatics of the Republic of Indonesia to prepare university graduates in Indonesia who have not
@@ -280,34 +297,34 @@
 
         <!-- Start Certificates Content -->
         <div class=" w-full mt-4 md:mt-0">
-          <h2 class="flex justify-center font-Nunito font-bold text-4xl lg:pl-28 lg:justify-start ">Certificates </h2>
-          <div>
+          <h2 class="flex justify-center font-Nunito font-bold text-4xl lg:pl-28 lg:justify-start">Certificates </h2>
+          <div class="font-Nunito">
             <ul class="list-image-greenBullet list-outside pl-10 pr-3 py-4 lg:pl-28">
               <!-- Items Start -->
               <li class="py-2">
                 <p class="font-semibold ">Menjadi Front-End Web Developer Expert </p>
-                <p class="font-Nunito text-black opacity-75"> Dicoding Academy Indonesia
+                <p class="text-black opacity-75"> Dicoding Academy Indonesia
                 </p>
               </li>
               <!-- Items End -->
               <!-- Items Start -->
               <li class="py-2">
                 <p class="font-semibold ">Belajar Dasar Git dengan Github</p>
-                <p class="font-Nunito text-black opacity-75"> Dicoding Academy Indonesia
+                <p class="text-black opacity-75"> Dicoding Academy Indonesia
                 </p>
               </li>
               <!-- Items End -->
               <!-- Items Start -->
               <li class="py-2">
                 <p class="font-semibold ">Memulai Pemrograman dengan Python</p>
-                <p class="font-Nunito text-black opacity-75"> Dicoding Academy Indonesia
+                <p class="text-black opacity-75"> Dicoding Academy Indonesia
                 </p>
               </li>
               <!-- Items End -->
               <!-- Items Start -->
               <li class="py-2">
                 <p class="font-semibold ">Belajar Analisis Data dengan Python</p>
-                <p class="font-Nunito text-black opacity-75"> Dicoding Academy Indonesia
+                <p class="text-black opacity-75"> Dicoding Academy Indonesia
                 </p>
               </li>
               <!-- Items End -->
@@ -376,12 +393,11 @@
     <!-- Experience Section End -->
 
     <!-- Portofolios Section Start -->
-    <section id="portofolios" class="mt-8 lg:w-screen ">
-      <h2 class="flex justify-center font-Nunito font-bold text-4xl  ">Portofolios</h2>
+    <section id="portofolios" class="lg:w-screen ">
+      <h2 class="flex justify-center font-Nunito font-bold text-4xl pt-10 lg:pt-20">Portofolios</h2>
 
       <div
-        class="w-screen flex flex-col gap-4 py-4 px-4 lg:flex-row lg:flex-wrap lg:pr-8 lg:justify-center lg:py-6 lg:gap-6 ">
-
+        class="w-screen flex flex-col gap-4 py-4 px-4 lg:flex-row lg:flex-wrap lg:pr-8 lg:justify-center lg:py-6 lg:gap-6 font-Nunito">
         <!-- Start Card Left -->
         <div
           class="flex bg-white w-full lg:w-[48%] lg:box-border shadow-sm transition ease-in-out duration-500 hover:shadow-shadow85 hover:-translate-y-1 hover:-translate-x-1">
@@ -542,7 +558,7 @@
     <!-- Portofolios Section End -->
   </main>
 
-  <footer class="w-screen bg-white mt-14 border-t-0 border-slate-500 md:w-screen">
+  <footer class="w-screen bg-white mt-14 border-t-0 border-slate-500 md:w-screen lg:mt-20">
     <span class="relative flex justify-center">
       <div
         class="absolute inset-x-0 top-1/2 h-px -translate-y-1/2 bg-transparent bg-gradient-to-r from-transparent via-gray-500 to-transparent opacity-75">
@@ -555,13 +571,13 @@
       <!-- Contact me -->
       <div class="md:w-1/3">
         <h2 class="flex justify-center font-Nunito text-lg font-bold py-4">Contact Me</h2>
-        <ul class="flex justify-center font-normal text-sm">
+        <ul class="flex justify-center font-normal text-sm font-Poppins">
           <li
             class="ml-3 px-6 py-2  border-black hover:bg-black hover:text-white transition ease-in-out duration-150 pointer ">
-            <a href="">Email</a></li>
+            <a href="mailto:syarifulm007@gmail.com">Email</a></li>
           <li
             class="px-4 py-2  border-black hover:bg-black hover:text-white transition ease-in-out duration-150 pointer ">
-            <a href="">Linkedin</a>
+            <a href="https://www.linkedin.com/in/syariful-musthofa/">Linkedin</a>
           </li>
         </ul>
       </div>
@@ -570,16 +586,16 @@
       <!-- Navigate -->
       <div class="md:w-1/3">
         <h2 class="flex justify-center font-Nunito text-lg font-bold py-4">Navigate</h2>
-        <ul class="flex justify-center font-normal text-sm">
+        <ul class="flex justify-center font-normal text-sm font-Poppins">
           <li
             class="ml-3 px-6 py-2  border-black hover:bg-black hover:text-white transition ease-in-out duration-150 pointer ">
-            <a href="">Home</a></li>
+            <a href="/#">Home</a></li>
           <li
             class="px-4 py-2  border-black hover:bg-black hover:text-white transition ease-in-out duration-150 pointer ">
-            <a href="">Portofolios</a></li>
+            <a href="#portofolios">Portofolios</a></li>
           <li
             class="px-6 py-2  border-black hover:bg-black hover:text-white transition ease-in-out duration-150 pointer ">
-            <a href="">About</a>
+            <a href="/#">About</a>
           </li>
         </ul>
       </div>
@@ -591,7 +607,7 @@
         <ul class=" flex justify-center gap-6 md:gap-8">
           <!-- Instagram -->
           <li>
-            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <a href="#" rel="noreferrer" class="text-gray-700 transition hover:text-gray-700/75">
               <span class="sr-only">Instagram</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -603,7 +619,7 @@
 
           <!-- Twitter -->
           <li>
-            <a href="#" rel="noreferrer" target="_blank" class="text-gray-700 transition hover:text-gray-700/75">
+            <a href="#" rel="noreferrer" class="text-gray-700 transition hover:text-gray-700/75">
               <span class="sr-only">Twitter</span>
               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -641,6 +657,8 @@
     </div>
 
   </footer>
+
+  <script src="dist/js/script.js"></script>
 
 </body>
 
